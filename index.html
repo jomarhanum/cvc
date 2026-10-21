@@ -4,12 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Centro Veterinário Caiçaras | Clínica veterinária no Caiçaras</title>
-<meta name="description" content="Chegou no Caiçaras: uma nova clínica, um novo jeito de cuidar do seu melhor amigo. Internação 24h, cirurgias, consultas, exames, vacinação, odontologia, farmácia e pet shop. Agende: (31) 97268-3028.">
+<meta name="description" content="Chegou no Caiçaras: uma nova clínica, um novo jeito de cuidar do seu melhor amigo. Internação 24h, cirurgias, consultas, exames, vacinação, odontologia, farmácia e pet shop. Rua Belmiro Braga, 505 - Alto Caiçaras, BH/MG. Agende: (31) 97268-3028.">
 <meta name="theme-color" content="#7A2E48">
 <meta property="og:title" content="Centro Veterinário Caiçaras">
 <meta property="og:description" content="Uma nova clínica, um novo jeito de cuidar do seu melhor amigo. Agende pelo WhatsApp (31) 97268-3028.">
 <meta property="og:image" content="img/pets.png">
 <link rel="icon" href="img/logo-cvc.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Centro Veterinário Caiçaras",
+  "image": "img/fachada.jpg",
+  "logo": "img/logo-cvc.png",
+  "telephone": "+55 31 97268-3028",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Belmiro Braga, 505",
+    "addressLocality": "Belo Horizonte",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.instagram.com/centroveterinariocaicaras/"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -140,6 +158,42 @@
   .step p{margin-top:.4rem;color:var(--muted)}
   .steps-line{position:absolute;top:72px;left:16%;right:16%;border-top:2px dashed var(--line);z-index:-1}
 
+  /* ---------- Estrutura (galeria) ---------- */
+  .gallery{display:grid;grid-template-columns:1.6fr 1fr 1fr;grid-template-rows:repeat(2,260px);gap:18px}
+  .shot{position:relative;border-radius:var(--radius);overflow:hidden;cursor:zoom-in;background:var(--pink-soft);box-shadow:0 14px 40px -24px rgba(122,46,72,.6)}
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .shot:hover img{transform:scale(1.06)}
+  .shot figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .9rem;font-family:Montserrat,sans-serif;font-weight:700;font-size:.9rem;color:var(--wine);line-height:1.25}
+  .shot figcaption small{display:block;font-weight:600;color:var(--muted);font-size:.76rem}
+  .shot-main{grid-row:1/3}
+  .shot-wide{grid-column:2/4}
+  .gallery-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-top:28px;padding:22px 28px;border-radius:var(--radius);background:var(--pink-soft)}
+  .gallery-cta p{font-family:Montserrat,sans-serif;font-weight:800;font-size:1.2rem;color:var(--wine)}
+  .gallery-cta p span{display:block;font-weight:600;font-size:.92rem;color:var(--muted);font-family:"Open Sans",sans-serif}
+  .btn-ig{background:linear-gradient(45deg,#F58529,#DD2A7B 45%,#8134AF 75%,#515BD4);color:#fff}
+  .btn-ig:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(221,42,123,.7)}
+
+  .lightbox{position:fixed;inset:0;z-index:200;background:rgba(30,12,20,.88);display:none;place-items:center;padding:24px;cursor:zoom-out}
+  .lightbox.open{display:grid}
+  .lightbox img{max-height:86vh;max-width:min(1000px,100%);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+  .lightbox p{color:#fff;font-family:Montserrat,sans-serif;font-weight:700;text-align:center;margin-top:14px}
+  .lightbox button{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--wine);font-size:1.6rem;cursor:pointer;line-height:1}
+
+  /* ---------- Localização ---------- */
+  .location{background:var(--blush)}
+  .loc-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:26px;align-items:stretch}
+  .loc-card{background:#fff;border-radius:var(--radius);padding:36px 32px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:22px}
+  .loc-row{display:flex;gap:14px;align-items:flex-start}
+  .loc-row .ic{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--pink-soft);color:var(--pink)}
+  .loc-row .ic svg{width:24px;height:24px}
+  .loc-row small{display:block;font-family:Montserrat,sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink)}
+  .loc-row b,.loc-row a.big{display:block;font-family:Montserrat,sans-serif;font-weight:800;font-size:1.12rem;color:var(--wine);line-height:1.3}
+  .loc-row span{color:var(--muted);font-size:.95rem}
+  .loc-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:auto}
+  .loc-actions .btn{padding:.85rem 1.2rem;font-size:.92rem}
+  .map{position:relative;border-radius:var(--radius);overflow:hidden;min-height:440px;box-shadow:var(--shadow);border:4px solid #fff;background:var(--pink-soft)}
+  .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
   /* ---------- CTA final ---------- */
   .cta{padding:0 0 110px}
   .cta-box{position:relative;border-radius:30px;overflow:hidden;background:linear-gradient(120deg,var(--wine-deep),var(--wine) 45%,var(--pink));color:#fff;padding:64px 56px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
@@ -194,6 +248,11 @@
     .hl-item:first-of-type{border-left:0}
     .services-grid{grid-template-columns:repeat(2,1fr)}
     .why-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery{grid-template-columns:1fr 1fr;grid-template-rows:320px 220px 220px}
+    .shot-main{grid-row:auto;grid-column:1/-1}
+    .shot-wide{grid-column:1/-1}
+    .loc-grid{grid-template-columns:1fr}
+    .map{min-height:360px}
     .cta-box{grid-template-columns:1fr;padding:48px 32px}
     .cta-phone{text-align:left}
   }
@@ -215,6 +274,10 @@
     .hl-band{grid-template-columns:1fr}
     .hl-item{border-left:0;border-top:1px solid var(--line);padding:26px 24px}
     .services-grid,.why-grid,.steps{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:240px}
+    .shot-main{grid-row:auto}
+    .gallery-cta .btn,.loc-actions .btn{width:100%;justify-content:center}
+    .loc-card{padding:28px 22px}
     .steps-line{display:none}
     .cta-box{padding:40px 24px;border-radius:24px}
     .cta-phone .btn{width:100%;justify-content:center}
@@ -228,6 +291,9 @@
 <!-- Ícone oficial do WhatsApp (reutilizado via <use>) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 32 32"><path d="M16.004 3C8.832 3 3.004 8.828 3.004 16c0 2.29.6 4.528 1.74 6.5L3 29l6.68-1.712A12.95 12.95 0 0 0 16.004 29C23.176 29 29 23.172 29 16S23.176 3 16.004 3Zm0 23.66a10.6 10.6 0 0 1-5.41-1.48l-.388-.23-3.964 1.016 1.058-3.864-.252-.398A10.6 10.6 0 0 1 5.37 16c0-5.862 4.77-10.632 10.634-10.632 5.862 0 10.628 4.77 10.628 10.632 0 5.864-4.766 10.66-10.628 10.66Zm5.83-7.96c-.32-.16-1.89-.932-2.184-1.038-.292-.108-.506-.16-.718.16-.214.32-.826 1.038-1.012 1.252-.186.212-.374.24-.692.08-.32-.16-1.35-.498-2.57-1.586-.95-.848-1.592-1.894-1.778-2.214-.186-.32-.02-.492.14-.652.144-.142.32-.372.48-.558.16-.188.212-.32.32-.534.106-.212.052-.4-.028-.558-.08-.16-.718-1.732-.984-2.372-.26-.622-.524-.538-.718-.548l-.612-.012a1.17 1.17 0 0 0-.85.4c-.292.32-1.116 1.09-1.116 2.66 0 1.568 1.142 3.084 1.302 3.298.16.212 2.248 3.432 5.446 4.812.762.328 1.356.524 1.818.672.764.242 1.46.208 2.01.126.612-.092 1.89-.772 2.156-1.518.266-.746.266-1.386.186-1.518-.078-.134-.292-.214-.612-.374Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8Z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21.5s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3.5h3.5l1.8 4.6-2.3 1.4a11 11 0 0 0 6.5 6.5l1.4-2.3 4.6 1.8V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2Z"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
 </svg>
 
@@ -240,8 +306,8 @@
     <nav class="menu" aria-label="Principal">
       <a href="#destaques">Internação 24h</a>
       <a href="#servicos">Serviços</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#agendar">Agendar</a>
+      <a href="#estrutura">Estrutura</a>
+      <a href="#localizacao">Como chegar</a>
     </nav>
     <a class="btn btn-primary js-wa" href="#" data-msg="Olá! Gostaria de agendar um horário no Centro Veterinário Caiçaras.">
       <svg><use href="#i-wa" fill="#fff"/></svg><span>Agende um horário</span>
@@ -268,6 +334,7 @@
           <span><svg><use href="#i-check"/></svg>Cuidado 24h</span>
           <span><svg><use href="#i-check"/></svg>Estrutura cirúrgica completa</span>
           <span><svg><use href="#i-check"/></svg>Cães e gatos</span>
+          <a href="#localizacao"><span><svg><use href="#i-pin"/></svg>Rua Belmiro Braga, 505 · Alto Caiçaras</span></a>
         </div>
       </div>
 
@@ -282,7 +349,7 @@
         </div>
         <div class="float-badge fb-2">
           <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6.5" cy="9" r="2.2"/><circle cx="10" cy="5.5" r="2.2"/><circle cx="14" cy="5.5" r="2.2"/><circle cx="17.5" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4.2-6 6.6 0 1.6 1.2 2.4 2.6 2.4 1.3 0 2.2-.7 3.4-.7s2.1.7 3.4.7c1.4 0 2.6-.8 2.6-2.4C18 15.2 15 11 12 11Z"/></svg></span>
-          <span><b>Nova clínica</b><small>no bairro Caiçaras</small></span>
+          <span><b>Nova clínica</b><small>no Alto Caiçaras · BH</small></span>
         </div>
       </div>
     </div>
@@ -389,6 +456,41 @@
     </div>
   </section>
 
+  <!-- ESTRUTURA -->
+  <section id="estrutura" aria-labelledby="h-est" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Nossa estrutura</p>
+        <h2 id="h-est">Venha conhecer a nossa estrutura e nossa equipe!</h2>
+        <p>Ambiente moderno, limpo e acolhedor, com profissionais que tratam cada paciente como se fosse da família.</p>
+      </div>
+      <div class="gallery">
+        <figure class="shot shot-main reveal" data-full="img/fachada.jpg">
+          <img src="img/fachada.jpg" alt="Fachada do Centro Veterinário Caiçaras, número 505" loading="lazy">
+          <figcaption>Nossa casa no Alto Caiçaras<small>Rua Belmiro Braga, 505</small></figcaption>
+        </figure>
+        <figure class="shot reveal" data-full="img/cirurgia.jpg">
+          <img src="img/cirurgia.jpg" alt="Veterinária atendendo cão em sala de procedimentos" loading="lazy">
+          <figcaption>Centro cirúrgico<small>Estrutura completa</small></figcaption>
+        </figure>
+        <figure class="shot reveal" data-full="img/atendimento.jpg">
+          <img src="img/atendimento.jpg" alt="Veterinária sorrindo ao examinar um cão" loading="lazy">
+          <figcaption>Atendimento com carinho<small>Clínica geral e especialidades</small></figcaption>
+        </figure>
+        <figure class="shot shot-wide reveal" data-full="img/recepcao.jpg">
+          <img src="img/recepcao.jpg" alt="Recepção da clínica atendendo uma tutora" loading="lazy" style="object-position:center 30%">
+          <figcaption>Recepção acolhedora<small>Você e seu pet bem recebidos desde a chegada</small></figcaption>
+        </figure>
+      </div>
+      <div class="gallery-cta reveal">
+        <p>Siga nossas redes sociais<span>Novidades, dicas de cuidado e o dia a dia da clínica.</span></p>
+        <a class="btn btn-ig" href="https://www.instagram.com/centroveterinariocaicaras/" target="_blank" rel="noopener">
+          <svg><use href="#i-ig"/></svg>@centroveterinariocaicaras
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- DIFERENCIAIS -->
   <section class="why" id="diferenciais" aria-labelledby="h-why">
     <div class="wrap">
@@ -401,7 +503,7 @@
         <div class="why-card reveal"><div class="num">24h</div><h3>Internação sempre pronta</h3><p>Seu pet acompanhado dia e noite quando mais precisar.</p></div>
         <div class="why-card reveal"><div class="num">+</div><h3>Estrutura completa</h3><p>Centro cirúrgico preparado para procedimentos com segurança.</p></div>
         <div class="why-card reveal"><div class="num">8</div><h3>Serviços em um só lugar</h3><p>Consulta, exame, vacina, farmácia e pet shop sem precisar rodar a cidade.</p></div>
-        <div class="why-card reveal"><div class="num">♥</div><h3>Pertinho de você</h3><p>Uma clínica nova, no coração do Caiçaras, feita para a sua família.</p></div>
+        <div class="why-card reveal"><div class="num">♥</div><h3>Pertinho de você</h3><p>Na Rua Belmiro Braga, 505, no Alto Caiçaras. Uma clínica nova, feita para a sua família.</p></div>
       </div>
     </div>
   </section>
@@ -434,8 +536,43 @@
     </div>
   </section>
 
+  <!-- LOCALIZAÇÃO -->
+  <section class="location" id="localizacao" aria-labelledby="h-loc">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Como chegar</p>
+        <h2 id="h-loc">Estamos pertinho de você</h2>
+        <p>No Alto Caiçaras, em Belo Horizonte. Fácil de chegar e de lembrar: Rua Belmiro Braga, 505.</p>
+      </div>
+      <div class="loc-grid">
+        <div class="loc-card reveal">
+          <div class="loc-row">
+            <span class="ic"><svg><use href="#i-pin"/></svg></span>
+            <div><small>Endereço</small><b>Rua Belmiro Braga, 505</b><span>Bairro Alto Caiçaras · Belo Horizonte / MG</span></div>
+          </div>
+          <div class="loc-row">
+            <span class="ic"><svg><use href="#i-wa" fill="currentColor"/></svg></span>
+            <div><small>Agende um horário</small><a class="big js-wa" href="#" data-msg="Olá! Gostaria de agendar um horário no Centro Veterinário Caiçaras.">(31) 97268-3028</a><span>WhatsApp e ligação</span></div>
+          </div>
+          <div class="loc-row">
+            <span class="ic"><svg><use href="#i-ig"/></svg></span>
+            <div><small>Instagram</small><a class="big" href="https://www.instagram.com/centroveterinariocaicaras/" target="_blank" rel="noopener">@centroveterinariocaicaras</a><span>Siga nossas redes sociais</span></div>
+          </div>
+          <div class="loc-actions">
+            <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Belmiro+Braga,+505,+Cai%C3%A7aras,+Belo+Horizonte+-+MG" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Traçar rota</a>
+            <a class="btn btn-ghost" href="https://waze.com/ul?q=Rua%20Belmiro%20Braga%2C%20505%2C%20Belo%20Horizonte&amp;navigate=yes" target="_blank" rel="noopener">Abrir no Waze</a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <iframe title="Mapa: Rua Belmiro Braga, 505 - Caiçaras, Belo Horizonte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Rua%20Belmiro%20Braga%2C%20505%20-%20Cai%C3%A7aras%2C%20Belo%20Horizonte%20-%20MG&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA FINAL -->
-  <div class="cta" id="agendar">
+  <div class="cta" id="agendar" style="padding-top:100px">
     <div class="wrap">
       <div class="cta-box reveal">
         <div>
@@ -464,12 +601,18 @@
       <div class="foot-info">
         <a class="js-wa" href="#" data-msg="Olá! Vim pelo site do Centro Veterinário Caiçaras.">WhatsApp: (31) 97268-3028</a>
         <a href="tel:+5531972683028">Ligar: (31) 97268-3028</a>
-        <span>Internação 24h · Cirurgias</span>
+        <a href="https://www.instagram.com/centroveterinariocaicaras/" target="_blank" rel="noopener">Instagram: @centroveterinariocaicaras</a>
+        <a href="#localizacao">Rua Belmiro Braga, 505 · Alto Caiçaras · BH/MG</a>
       </div>
     </div>
     <p class="foot-bottom">© <span id="year"></span> Centro Veterinário Caiçaras · Uma nova clínica, um novo jeito de cuidar do seu melhor amigo.</p>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button type="button" aria-label="Fechar">×</button>
+  <div><img src="" alt=""><p></p></div>
+</div>
 
 <!-- Botão flutuante WhatsApp -->
 <div class="wa-float" id="waFloat">
@@ -505,6 +648,18 @@
   const wf = document.getElementById("waFloat");
   setTimeout(() => wf.classList.add("show-tip"), 3500);
   setTimeout(() => wf.classList.remove("show-tip"), 11000);
+
+  // Galeria: ampliar foto
+  const lb = document.getElementById("lightbox");
+  const lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
+  document.querySelectorAll(".shot").forEach(s => s.addEventListener("click", () => {
+    lbImg.src = s.dataset.full;
+    lbImg.alt = s.querySelector("img").alt;
+    lbCap.textContent = s.querySelector("figcaption").firstChild.textContent;
+    lb.classList.add("open");
+  }));
+  lb.addEventListener("click", () => lb.classList.remove("open"));
+  addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("open"); });
 
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
